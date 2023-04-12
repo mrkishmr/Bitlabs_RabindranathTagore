@@ -1,0 +1,18 @@
+1 start
+  read length, breadth
+  compute the area of the triangle using the formula; area <-- length*breadth
+  print area
+  end
+
+--> write an algorithm to compute the gross salary of an employee 
+    gross_salary = basic_salary+DA+HRA
+
+2 start
+  read basic_salary
+  calculate DA using the formula DA <-- (50/100)*basic_salary
+  calculate HRA using the formula HRA <-- (20/100)*basic_salary
+  calculate gross_salary using the formula gross_salary <-- basic_salary+DA+HRA 
+  print gross_salary
+  end
+  
+  variables ---> basic_salary,DA,HRA,gross_salary
