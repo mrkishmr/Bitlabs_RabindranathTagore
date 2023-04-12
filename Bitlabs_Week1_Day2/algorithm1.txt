@@ -1,13 +1,16 @@
-1 start
-  read length, breadth
-  compute the area of the triangle using the formula; area <-- length*breadth
-  print area
-  end
+1 write an algorithm to find the area of a rectangle 
 
---> write an algorithm to compute the gross salary of an employee 
-    gross_salary = basic_salary+DA+HRA
+step 1: start
+step 2: read length, breadth
+step 3: compute the area of the triangle using the formula; area <-- length*breadth
+step 4: print area
+step 5: end
 
-2 
+
+---------------------------------------------------------------------------------------------
+
+2 write an algorithm to calculate gross salary using basic salary,DA,HRA
+ 
 step 1: start
 step 2: read basic_salary
 step 3: calculate DA using the formula DA <-- (50/100)*basic_salary
@@ -18,6 +21,8 @@ step 7: end
   
   variables ---> basic_salary,DA,HRA,gross_salary
 
+---------------------------------------------------------------------------------------------
+
 3 write an algorithm to swap two numbers
 
 step 1: start
@@ -27,3 +32,13 @@ step 4: compute num1 = num2
 step 5: compute num2 = temp
 step 6: print num1 and num2
 step 7: end
+
+---------------------------------------------------------------------------------------------
+
+4 write an algorithm to calculate compound interest (comp_interest=p*(1+r/100)^n)
+
+step 1: start
+step 2: read the principal amount, rate of interest, no of years into the variables p,r,t
+step 3: calculate the compound interest using the formula comp_interest = p*((1+r/100)^t)
+step 4: print comp_interest
+step 5: end
