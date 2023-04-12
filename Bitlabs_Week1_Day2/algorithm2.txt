@@ -7,3 +7,29 @@ step 3: if(percentage>85)
         else
 		print "not eligible for admission"
 step 4: end
+
+-------------------------------------------------------------------------------
+
+2 write an algorithm to find the largest of two numbers
+
+step 1: start
+step 2: read two numbers into the variables n1,n2
+step 3: if(n1>n2)
+		print"n1 is greater"
+	else
+		print"n2 is greater"
+step 4: end
+
+-------------------------------------------------------------------------------
+
+3 write an algorithm to find largest of three numbers
+
+step 1: start
+step 2: read the three numbers; number1, number2, number3
+step 3: if(number1>number2 and number1>number3)
+		print "number1 is greatest"
+	else if(number2>number1 and number2>number3)
+		print "number2 is greatest"
+	else
+		print "number3 is greatest"
+step 4: end
