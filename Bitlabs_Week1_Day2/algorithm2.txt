@@ -1,0 +1,9 @@
+1 write an algorithm to find whether a student is eligible to take admission in a college (if percentage is greater than 85 then he is eligible to take admission)
+
+step 1: start
+step 2: read the percentage scored by the student
+step 3: if(percentage>85)
+        	print "eligible for admission"
+        else
+		print "not eligible for admission"
+step 4: end
