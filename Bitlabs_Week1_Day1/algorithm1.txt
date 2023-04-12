@@ -1,0 +1,5 @@
+1 start
+  read length, breadth
+  compute the area of the triangle using the formula; area <-- length*breadth
+  print area
+  end
