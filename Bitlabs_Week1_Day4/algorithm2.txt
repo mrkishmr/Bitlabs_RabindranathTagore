@@ -1,0 +1,41 @@
+1 write an algorithm to find the product of first n odd numbers
+
+step 1: start
+step 2: read the number n
+step 3: initialize the values product=1,count=1,i=1
+step 4: repeat the following steps till the condition (count<=n) is satisfied
+        if the conditions are satisfied, execute the following statements
+	product=(2*product+1)*i
+	i=i+1
+        count=count+1
+step 5: print product
+step 6: end 
+
+-----------------------------------------------------------------------------------------
+
+2 write an algorithm to find the sum of digits of a positive integer
+
+step 1: start
+step 2: read the positive integer n
+step 3: initialize sum=0
+step 4: repeat the execution until the condition (n!=0) is satisfied
+        digit=n%10
+	sum=sum+digit
+	n=n/10
+step 5: print sum
+step 6: end
+
+-----------------------------------------------------------------------------------------
+
+3 write an algorithm to print the reverse of a number
+
+step 1: start
+step 2: read the number n
+step 3: initialize rev_num=0
+step 4: repeat the steps i,ii,iii till the condition (n!=0) is satisfied
+        if satisfied execute the following statements
+        digit=n%10
+	rev_num=(rev_num%10)+digit
+	n=n/10
+step 5: print rev_num
+step 6: end
