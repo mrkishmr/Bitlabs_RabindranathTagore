@@ -3,11 +3,11 @@
 step 1: start
 step 2: read the number n
 step 3: initialize the values product=1,count=1,i=1
-step 4: repeat the following steps till the condition (count<=n) is satisfied
+step 4: repeat the following steps i,ii,iii till the condition (count<=n) is satisfied
         if the conditions are satisfied, execute the following statements
-	product=(2*product+1)*i
-	i=i+1
-        count=count+1
+	i)product=(2*product+1)*i
+	ii)i=i+1
+        iii)count=count+1
 step 5: print product
 step 6: end 
 
@@ -18,10 +18,10 @@ step 6: end
 step 1: start
 step 2: read the positive integer n
 step 3: initialize sum=0
-step 4: repeat the execution until the condition (n!=0) is satisfied
-        digit=n%10
-	sum=sum+digit
-	n=n/10
+step 4: repeat the steps i,ii,iii until the condition (n!=0) is satisfied
+        i)digit=n%10
+	ii)sum=sum+digit
+	iii)n=n/10
 step 5: print sum
 step 6: end
 
@@ -34,8 +34,8 @@ step 2: read the number n
 step 3: initialize rev_num=0
 step 4: repeat the steps i,ii,iii till the condition (n!=0) is satisfied
         if satisfied execute the following statements
-        digit=n%10
-	rev_num=(rev_num%10)+digit
-	n=n/10
+        i)digit=n%10
+	ii)rev_num=(rev_num%10)+digit
+	iii)n=n/10
 step 5: print rev_num
 step 6: end
