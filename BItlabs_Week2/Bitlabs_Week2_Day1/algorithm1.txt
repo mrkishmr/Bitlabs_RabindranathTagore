@@ -1,0 +1,13 @@
+1 write an algorithm to find the difference between even number sum and odd number sum between 1 to 100
+
+step 1: start
+step 2: initialize the numbers n=1,odd_sum=0,even_sum=0 respectively
+step 3: repeat the steps until n<=100
+	i) if(n%2=0)
+	   	even_sum=even_sum+n;
+	   else
+		odd_sum=odd_sum+n;
+	ii)n=n+1
+step 4: assign difference=even_sum-odd_sum
+step 5: print differnce
+step 6: end

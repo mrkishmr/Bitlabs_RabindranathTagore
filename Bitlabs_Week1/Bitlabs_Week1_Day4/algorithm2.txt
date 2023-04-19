@@ -1,0 +1,33 @@
+1 write an algorithm to find the sum of any numbers
+
+step 1: start
+step 2: read the number n
+step 3: initialize sum=0,count=1,i=1 
+step 4: repeat the following steps i,ii,iii,iv until the condition (count<=n) is satisfied
+	i)read the number
+	ii)sum=sum+i
+	iii)i=i+1
+	iv)count=count+1
+step 5: print sum
+step 6: stop
+
+-----------------------------------------------------------------------------------------
+
+2 write an algorithm to check whether a number is a strong number or not
+
+step 1: start
+step 2: read the number
+step 3: initialize sum=0, n=number
+step 4: repeat the following steps i,ii,iii until n!=0
+	i) digit=n%10
+	ii) sum=sum+digit_factorial
+	iii) n=n/10
+step 5: print sum
+step 6: if(sum==number)
+		print("the number is a strong number")
+	else
+		print("the number is not a strong number")
+step 7: stop
+
+-----------------------------------------------------------------------------------------
+
