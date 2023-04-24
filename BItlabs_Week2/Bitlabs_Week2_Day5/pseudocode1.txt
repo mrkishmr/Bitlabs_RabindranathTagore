@@ -1,0 +1,127 @@
+1 write a pseudocode to find the area of a rectangle
+
+begin
+	declare the variables length,breadth,area
+	read length, breadth
+	compute area=length*breadth
+	print area
+end
+
+--------------------------------------------------------------------------
+
+2 write a pseudocode to swap two numbers
+
+begin
+
+	declare the variables num1,num2,temp
+	read num1,num2
+	assign temp=num1
+	compute num1=num2
+	compute num2=temp
+	print num1, num2
+end
+
+--------------------------------------------------------------------------
+
+3 write a pseudocode to find the largest of three numbers
+
+begin
+
+	declare the variables number1,number2,number3
+	read the variables number1,number2,number3
+	if ((number1>number2)&&(number1>number3)
+	{
+	print("number1 is greatest")
+	}
+	else if((number2>number1)&&(number2>number3)
+	{
+	print("number2 is greatest)
+	}
+	else
+	{
+	print("number3 is greatest")
+	}
+end
+
+--------------------------------------------------------------------------
+
+4 write a pseudocode to check whether a student is eligible to take admission or not
+
+begin
+
+	declare the variable percentage //percentage scored by the student
+	read percentage
+	if(percentage>85)
+	{
+	print("eligible for admission")
+	}
+	else
+	{
+	print("not eligible for admission")
+	}
+end
+
+--------------------------------------------------------------------------
+
+5 write a pseudocode to calculate gross salary using basic salary, DA, HRA
+
+begin
+
+	declare the variables basic_salary,DA,HRA,gross_salary
+	read basic_salary
+	compute DA=(50/100)*basic_salary
+	compute HRA=(20/100)*basic_salary
+	compute gross_salary=basic_salary+DA+HRA
+	print gross_salary
+end
+
+--------------------------------------------------------------------------
+
+6 write a pseudocode to calculate compount interest
+
+begin
+	declare the variables principal,rate,time,comp_interest
+	read the variables principal,rate,time
+	compute comp_interest=p*((1+r/100)^t)
+	print comp_interest
+end
+
+--------------------------------------------------------------------------
+
+7 write a pseudocode to calculate the sum of first n natural numbers
+
+begin
+
+	declare variables n,sum
+	read variable n
+	compute sum=n*(n+1)/2
+	print sum
+end
+
+--------------------------------------------------------------------------
+
+8 write a pseudocode to find the sum of first n even numbers
+
+begin
+
+	declare variables n,sum,i,count
+	read variable n
+	initialize sum=0,i=2
+	for(count=1;count<=n;count++)
+	{
+	sum=sum+i
+	i=i+2
+	}
+	print sum
+end
+
+--------------------------------------------------------------------------
+
+9 write a pseudocode to find the factorial of a given positive integer
+
+begin
+
+	
+	 
+	
+	
