@@ -120,7 +120,18 @@ end
 9 write a pseudocode to find the factorial of a given positive integer
 
 begin
-
+	
+	declare the variables n,i,factorial,count
+	read the variable n
+	initialize i=1,factorial=1
+	for(count=1;count<=n;count++)
+	{
+		factorial=factorial*i
+		i=i+1
+	}
+	print factorial
+end
+	
 	
 	 
 	
