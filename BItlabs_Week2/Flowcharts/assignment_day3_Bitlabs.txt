@@ -1,0 +1,29 @@
+write an algorithm for library management software
+
+step 1:- start
+step 2:- open the library management software
+step 3:- select the user type either student or management staff
+step 4:- if the student/ management staff is not registered then click on register button/icon
+step 5:- enter the details for register the process
+step 6:- after registering you will recieve the OTP on your mobile number/email id
+step 7:- if OTP is received then PRINT( enter the OTP)
+step 8:- else print(resend the OTP)
+step 9:- now, enter the login credentials if password is correct print (login successfull) else print password is incorrect
+step 10:- if password is incorrect  reset the password and login
+step 11:- now a student/staff enter in to the library and ask to the librarian for searching the required books
+step 12:- now librarian will serach the book in the library database
+step 13:- if the book is available print (available and location/section of the book) and print number of copies available
+step 14:- else print(the book is not available)
+step 15:- if student/staff can take the book and read it in library then print ( give the sitting position)
+step 16:- after reading the book student/staff can return the book to the libraraian
+step 17:- else if student/staff wants to borrow a book print ( you can enter/ register the book ID/ member ID )
+step 18:- print (enter the due date)
+step 19:- you will receive a notification to email id/ mobile number as book is issued
+step 20:- if the student/staff wants to return the book print(enter the student/staff member ID)
+step 21:- collecting the book by librarian
+step 22:- if due date is not over print( collect the book)
+step 23:- else print(pay penalty by student/staff )
+step 24:- after paying the penalty by student/staff now collect the book
+step 25:- now libraraian has to clear the student/staff due and he has to print(book is returned)
+step 26:- you will receive a notification to email id/ mobile number as book is returned
+step 27:- stop
