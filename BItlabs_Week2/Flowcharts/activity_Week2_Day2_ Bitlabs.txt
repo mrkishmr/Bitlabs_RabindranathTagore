@@ -1,0 +1,48 @@
+write an algorithm to manage a Restaurant Management System
+
+step 1: start
+step 2: open the restaurant management portal
+step 3: login to the portal by using the given credentials (userID and password)
+step 4: if userID and password are correct
+		print "login successful"
+	else
+		print "invalid credentials"
+step 5: after logging in to the portal, display the options like takeaway or dine in
+
+step 6: if user selects takeaway
+step 6.1: display "menu"
+step 6.2: select the required item from the menu
+step 6.3: display the selected items and confirm it
+step 6.4: display the total amount and proceed with payment by selecting the payment mode (cash, card or UPI)
+step 6.5: if we select cash option, continue with the payment
+	  else if we select card option, enter the card details and proceed with the payment
+	  else select UPI option, either scan the code or enter the UPI ID, confirm the details and proceed with payment
+	  after successful payment, your order will be under process and display the waiting time
+	  after order is processed, collect the order
+		
+step 6.6: else user selects dine in
+step 6.7: display the table arrangement
+step 6.8: select the table according to convenience and availability
+step 6.9: display the menu
+step 6.10: select the required item from the menu
+step 6.11: display the selected items and confirm it
+step 6.12: after the order is confirmed, the order will be delivered to your table
+step 6.13: proceed with payment by selecting the payment mode (cash, card or UPI)
+step 6.14: if we select cash option,continue with the payment
+           else if we select card option, enter the card details and proceed with the payment
+	   else select UPI option, either scan the code or enter the UPI ID, confirm the details and proceed with payment
+		after successful payment, display the message "thank you and visit again" and give the rating and review
+
+step 7: if Kitchen management option is selected
+step 7.1: display options like list of employees in kitchen department, list of items available and order manager 
+step 7.2: if list of employees in kitchen option is selected, display the list of employees and the employees who are present and absent as of now
+step 7.3: if list of items available option is selected, then display the list of items available and the quantity available
+step 7.4: if order manager is selected then display the orders which are to be prepared
+	  after the order is prepared update the order as your order is ready
+	  and dispatch the order to the respective customer
+
+step 8: end 
+
+	 
+	
+	
