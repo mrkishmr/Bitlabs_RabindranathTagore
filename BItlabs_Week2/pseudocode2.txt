@@ -1,0 +1,40 @@
+write a pseudocode to estimate TDS based on an employees annual salary
+
+begin
+
+	numeric salary,tds
+	print "enter the salary"
+	read salary
+	if(salary<=700000)
+	{
+	    print "tds is not applicable on this amount"
+	}
+	else
+        {
+	if(salary<=300000)
+	{
+	   tds=(5*salary)/100
+	   print("TDS is",tds)
+        }
+	else if(salary<=600000)
+        {
+           tds=(5*300000)/100+(10*salary)/100
+	   print("TDS is",tds)
+        }
+	else if(salary<=900000)
+	{
+	   tds=((5*300000)/100)+((10*300000)/100)+((15*salary)/100)
+	   print("TDS is",tds)
+        }
+        else if(salary<=1200000)
+	{
+	   tds=((5*300000)/100)+((10*300000)/100)+((15*300000)/100)+((20*salary)/100)
+           print("TDS is",tds)
+        }
+	else
+	{
+	   tds=((5*300000)/100)+((10*300000)/100)+((15*300000)/100)+((20*300000)/100)+((30*salary)/100)
+           print("TDS is",tds)
+        }
+        }
+end

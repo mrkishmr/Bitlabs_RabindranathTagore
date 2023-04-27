@@ -1,0 +1,28 @@
+pseudocode to generate the grading based on the marks of the student
+
+begin
+
+   numeric internal,external,project,total
+   print "enter the internal,external and project marks of the student"
+   read internal,external,project
+   if((internal>=50)&&(external>=50)&&(project>=50))
+   {
+     assign total=int_marks+ext_marks+proj_marks
+     if(total>90)
+     {
+         print "grade secured is A"
+     }
+     else if(total>=70)
+     {
+   	 print "grade secured is B"
+     }
+     else
+     {
+	 print "grade secured is C"
+     }
+   else
+       if(internal<50)
+       {
+         print ("failed in internals and the score is"
+
+end
