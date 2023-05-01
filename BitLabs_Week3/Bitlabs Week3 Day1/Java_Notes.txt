@@ -1,0 +1,117 @@
+Features of JAVA
+
+1) Platform Independent
+2) Supports Multithreading
+3) Highly secure and portable
+4) Automatic garbage collection
+5) Memory optimisation
+6) Code reusability
+7) Architectural neutral
+8) Has its own JVM for code compilation
+
+public <-- access modifier
+
+static <-- calling the method without the use of object 
+
+-------------------------------------------------------------------------------
+
+Steps to compile and run a JAVA Program
+
+1) write the program and save it in the format
+   filename.java where .java is the extension for java file
+2) in the command line enter the command
+   javac filename.java
+3) after entering the above command, the java code is compiled and converted to bytecode
+4) the bytecode cannot be understandable, hence it is converted into machine level code using JVM
+5) to run the java program enter the command
+   java filename
+
+JDK - stands for Java Development kit and it is used for compiling and running JAVA programs and mainly used for developing Java based applications, the JDK contains tools such as JRE and class libraries 
+JVM - stands for Java Virtual Machine and is used for conversion of bytecode of program to machine code during compilation
+JRE - stands for Java Runtime Environment and is used to run java programs
+
+-------------------------------------------------------------------------------
+
+--> sections in a java program
+
+    documentation section
+
+    package declaration
+
+    import declarations
+
+    interface statements
+
+    class declarations
+
+    main method class{
+    main method definition
+    }
+
+-------------------------------------------------------------------------------
+
+tokens:- are the small and main important elements in a JAVA program
+
+the different tokens are 
+
+i) Keywords:- keywords are the special reserved words in Java which are defined for a specific purpose
+   these keywords are predefined and cannot be changed by the user
+
+ii) Identifiers:- Identifiers are the elements which are unique and are holding a value
+
+iii) Literals:- literals are the values which are used in JAVA
+		they can be either numeric or character literal
+
+iv) Operators:- operators are used to perform soome specific operation such as arithmetic, logical, relational etc.
+
+Rules for Identifiers
+
+1) an identifier can have alphabets, numbers, underscore and dollar($)symbol
+2) an identifier should only start with alphabet
+3) an identifier cannot have whitespaces
+4) keywords cannot be used as identifiers
+
+Data types:- data types are used in aprogram to define the type of data, such as numerical or alphabet, to deal with a program
+
+data types are basically classifed into two types
+
+1) primitive data type
+2) non primitive data type
+
+1) primitive data types are further classified as
+   a) numeric data type
+      	byte - 1 byte - ranges from -128 to 127
+      	short - 2 bytes - ranges from -2^15 to 2^15 - 1
+      	int - 4 bytes - ranges from -2^31 to 2^31 - 1
+      	long - 8 bytes - ranges from -2^63 to 2^63 - 1
+      	float - 4 bytes
+      	double  - 8 bytes
+
+   b) non numeric data type
+	boolean - 1 bit
+	character - 2 bytes
+
+2) under non primitive data type, we have
+   a) String
+   b) Array
+   c) User defined class
+
+variable:- variable is a temporary storage space which contains a value in it
+           ex:- a=2 which means that the value 2 is stored in a where a is the variable 
+
+-------------------------------------------------------------------------------
+
+1)write a program to convert a integer value into floating value
+
+//program to illustrate implicit type conversion
+
+public class Widen
+{
+   public static void main(String[] args)
+	{
+		int a=2;
+		float b=float(a);
+		System.out.println("before conversion the value is "+a);
+		System.out.println("after conversion the value is "+b);
+        }
+}
