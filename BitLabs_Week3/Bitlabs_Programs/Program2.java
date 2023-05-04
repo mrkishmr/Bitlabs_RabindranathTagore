@@ -1,16 +1,56 @@
-// Program to find the area of a rectangle
+//Program to Read a number and print the weekday
 
-import java.util.Scanner; //Import Scanner Class
+import java.util.*;
 
 public class Program2
-{
-  public static void main(String[] args) //main method 
   {
-    Scanner sc=new Scanner(System.in); 
-    System.out.println("Enter the length and breadth");
-    int l=sc.nextInt();//Read the value of length
-    int b=sc.nextInt();//Read the value of breadth
-    int area=l*b;//Find the area of the rectangle using formula area=length*breadth
-    System.out.println("The area of the recangle is " + area);// Display the area of the rectangle
-  } 
-}
+    public static void main(String[] args)
+    {
+      Scanner s=new Scanner(System.in);
+      System.out.println("Enter the week code");
+      int num=s.nextInt();
+      switch(num)
+        {
+          case 1:
+            {
+               System.out.println("Day is Sunday");
+              break;
+            }
+          case 2:
+            {
+               System.out.println("Day is Monday");
+              break;
+            }
+          case 3:
+            {
+               System.out.println("Day is Tuesday");
+              break;
+            }
+          case 4:
+            {
+               System.out.println("Day is Wednesday");
+              break;
+            }
+          case 5:
+            {
+               System.out.println("Day is Thursday");
+              break;
+            }
+          case 6:
+            {
+               System.out.println("Day is Friday");
+              break;
+            }
+          case 7:
+            {
+               System.out.println("Day is Saturday");
+              break;
+            }
+          default:
+            {
+               System.out.println("Please enter correct number");
+              break;
+            }
+        }
+    }
+  }

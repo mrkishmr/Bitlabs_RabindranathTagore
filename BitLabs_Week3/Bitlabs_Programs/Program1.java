@@ -1,14 +1,15 @@
-import java.util.Scanner;
+// Program to compute operation of numbers in different format (decimal/octal)
 
-class Prog1
-{
-	public static void main(String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		int a,b;
-		System.out.println("Enter the values of a and b");
-		a=sc.nextInt();
-		b=sc.nextInt();
-		System.out.println("The value of a+b is " + (a+b));
-	}
-}
+import java.util.*;
+
+public class Program1
+  {
+    public static void main(String[] kishan)
+    {
+      int a=200;
+      int b=002;
+      int c=020;
+      System.out.println("The result is "+ (a+b+c));
+      
+    }
+  }
