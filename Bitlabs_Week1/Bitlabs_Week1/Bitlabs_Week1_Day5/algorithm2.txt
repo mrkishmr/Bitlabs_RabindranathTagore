@@ -1,0 +1,14 @@
+1 write an algorithm to find the number of factors for a given number
+
+step 1: start
+step 2: read the number n
+step 3: initialize count=0,i=0
+step 4: repeat the steps i,ii until (i<=n)
+	i)if(n%i==0)
+		print i
+		count=count+1
+	ii)i=i+1
+step 5: print count
+step 6: end
+
+-----------------------------------------------------------------------------------------

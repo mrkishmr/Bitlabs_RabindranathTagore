@@ -1,0 +1,81 @@
+1 write an algorithm to find whether a student is eligible to take admission in a college (if percentage is greater than 85 then he is eligible to take admission)
+
+step 1: start
+step 2: read the percentage scored by the student
+step 3: if(percentage>85)
+        	print "eligible for admission"
+        else
+		print "not eligible for admission"
+step 4: end
+
+-------------------------------------------------------------------------------
+
+2 write an algorithm to find the largest of two numbers
+
+step 1: start
+step 2: read two numbers into the variables n1,n2
+step 3: if(n1>n2)
+		print"n1 is greater"
+	else
+		print"n2 is greater"
+step 4: end
+
+-------------------------------------------------------------------------------
+
+3 write an algorithm to find largest of three numbers
+
+step 1: start
+step 2: read the three numbers; number1, number2, number3
+step 3: if(number1>number2 and number1>number3)
+		print "number1 is greatest"
+	else if(number2>number1 and number2>number3)
+		print "number2 is greatest"
+	else
+		print "number3 is greatest"
+step 4: end
+
+-------------------------------------------------------------------------------
+
+4 Solve the calculator application that will give the result for all arithmetic applications like addition, subtraction, multiplication, and division with the following scenario.
+
+i. build an algorithm that will promote dynamic data for variables
+
+step 1: start
+step 2: read any two numbers into the variables num1,num2
+step 3: compute add=num1+num2
+	compute subb=num1-num2
+	compute mul=num1*num2
+	compute div=num1/num2
+step 4: print add,subb,mul,div
+step 5: end
+
+ii. build an algorithm that will promote static data  for variables
+
+step 1: start
+step 2: assign num1=25, num2=90
+step 3: compute add=num1+num2
+	compute subb=num1-num2
+	compute mul=num1*num2
+	compute div=num1/num2
+step 4: print add,subb,mul,div
+step 5: end
+
+iii. build an algorithm with the following condition
+
+find division only in case both variables are +ve
+find subtraction in case the first variable is +ve, the second variable is –ve
+find addition in case of both variables are –ve the find addition
+find multiplication if both variables are –ve
+
+step 1: start
+step 2: read values for num1 and num2
+step 3: if(num1>0 and num2>0)
+	div=num1/num2
+	else if(num1>0 and num2<0)
+	subb=num1-num2
+	else if(num1<0 and num2<0)
+	add=num1+num2
+	else
+	mul=num1*num2
+step 4: print add,sub,mul,div
+step 5: end
