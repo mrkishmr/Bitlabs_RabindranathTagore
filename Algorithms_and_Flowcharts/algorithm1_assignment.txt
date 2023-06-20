@@ -1,0 +1,128 @@
+1) Build an algorithm for the following problems: 
+
+i. Defined the Greatest number among any given two numbers
+
+step 1: start
+step 2: read two numbers into the variables n1,n2
+step 3: if(n1>n2)
+		print"n1 is greater"
+	else
+		print"n2 is greater"
+step 4: end
+
+ii. Check a number is +ve , -ve or 0
+
+step 1: start
+step 2: read the number into the variable num
+step 3: if(num>0)
+		print number is a positive integer
+	else if(num<0)
+		print number is a negative integer
+	else
+		print number
+step 4: end
+
+iii. check number is divisible by 7 and 3
+
+step 1: start
+step 2: read the number into the variable num
+step 3: if (((num%3)==0)and((num%7)==0)))
+        	print the number is divisible by 7 and 3
+	else
+		print the number is not divisibe by 7 and 3
+step 4: end
+
+iv. A person is eligible to vote or not.
+
+step 1: start
+step 2: read the age
+step 3: if(age>18)
+		print the person is eligible to vote
+	else 
+		print the person is not eligible to vote
+step 4: end
+
+v. a number is even or odd
+
+step 1: start
+step 2: read the number into the variable num
+step 3: if ((num%2)==0)
+        	print the number is an even number
+	else
+		print the number is an odd number
+step 4: end
+
+
+vi. A person is eligible for the loan or not based on his CIBIL score
+		if Cibil Score is above 700 eligible for any loan
+		if the Cibil score is less than 700 not eligible for any loan
+
+step 1: start
+step 2: read the cibil score of the person into the variable cibil 
+step 3: if(cibil>700)
+		print the person is eligible to take a loan
+	else 
+		print the person is not eligible to take a loan
+step 4: end
+
+-----------------------------------------------------------------------------------------
+
+2)Write an algorithm for the following
+
+ A company will give a bonus to their employees based on their service in the company
+below 1 year: 3000 Rs bonus
+below 2 years: 20 % of salary as a bonus
+below 5 years: 30 % of salary as a bonus
+5 years or above: 10000 Rs as a bonus
+
+step 1: start
+step 2: read the salary and no of years of the employee into the variables salary and years
+step 3: if(year<1)
+		assign bonus=3000
+	else if((year>=1) and (year<2))
+		compute bonus=(salary*20)/100
+	else if((year>=2 and (year<=5)
+		compute bonus=(salary*30)/100
+	else
+		assign bonus=10000
+step 4: compute total_salary=salary+bonus
+step 5: print total_salary
+step 6: end
+
+-----------------------------------------------------------------------------------------
+
+3) Assume that the following South Indian states charge 1 litre of petrol as per the following conditions. 
+ 
+Build an algorithm that will give petrol prices in any state if the state name has given
+
+AP: startingprice+ 12 Rs Service charge
+TS: startingprice+ 10 Rs Service charge
+TN: startingprice+ 9 Rs Service charge
+KA: startingprice+ 9 Rs Service charge
+KL: startingprice+ 8 Rs Service charge
+
+step 1: start
+step 2: read the price of petrol into the variable starting_price
+step 3: read the state code into the string variable state
+step 4: if((state=="AP"))
+		compute petrol_rate=starting_price+12
+	else if((state=="TS"))
+		compute petrol_rate=starting_price+10
+        else if((state=="TN"))
+		compute petrol_rate=starting_price+9
+	else if((state=="KA"))
+		compute petrol_rate=starting_price+9
+	else if((state=="KL"))
+		compute petrol_rate=starting_price+8
+	else 
+		print please enter a valid state code
+step 5: print petrol_rate
+step 6: end
+
+-----------------------------------------------------------------------------------------
+
+
+
+
+ 
+
