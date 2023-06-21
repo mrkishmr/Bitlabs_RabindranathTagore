@@ -1,0 +1,124 @@
+1. Write the for loop syntax for following scenario 
+
+Scenario 1: 
+
+my ticket no is 2
+my ticket no is 4
+my ticket no is 6
+my ticket no is 8
+my ticket no is 10
+my ticket no is 22
+
+for(i=2;i<=22;i=i+2)
+{
+print ("my ticket no. is"+i);
+}
+
+Scenario 2: 
+
+I have 100 biscuits
+I have 90 biscuits
+I have 80  biscuits
+I have 70 biscuits
+I have 60 biscuits
+I have 50 biscuits
+I have 40 biscuits
+
+for(i=100;i>30;i=i+10)
+{
+print ("i have"+i+"biscuits);
+}
+
+-----------------------------------------------------------------------------------------
+
+2. Trace out how the following for loop will execute
+
+Example 1:
+
+for(i=3;i<=17;i=i*3)
+display(i)
+
+iteration 1:i=3;condition satisfied;i=9
+iteration 2:i=9:condition not satisfied, hencs loop is terminated
+
+Example 2:
+
+for(i=16;i>=1;i=i/2)
+display(i)
+
+iteration 1:i=16;condition satisfied;i=8
+iteration 2:i=8;condition satisfied;i=4
+iteration 3:i=4;condition satisfied;i=2
+iteration 4:i=2;condition satisfied;i=1
+iteration 5:i=1;condition not satisfied, hence loop is terminated
+
+-----------------------------------------------------------------------------------------
+
+3. Write algorithm to Display series 
+100, 107, 114, 121, 128, ------ all number less than 205
+
+step 1: start
+step 2: declare variable i
+step 3: for(i=100;i<205;i=i+7)
+	print i
+step 4:end
+ 
+-------------------------------------------------------------------
+
+4. Write algorithm to find values of 1+2+3+4+5+------100
+
+step 1: start
+step 2: declare variable sum,i
+step 3: initalize sum=0
+step 4: for(i=1;i<=100;i++)
+		sum=sum+i
+step 5: print sum
+step 6: end
+
+---------------------------------------------------------------------
+
+5. Find the factorial of a number say number!
+
+step 1: start
+step 2: read the number into the variable n
+step 3: for(i=1;i<=n;i++)
+	n=n*i
+step 4: print n
+step 5: end
+
+-----------------------------------------------------------------------------------------
+
+6. Find the values of 1^1+2^2+3^3+4^4+5^5+...........+n^n
+
+step 1: start
+step 2: initalize sum=0
+step 3: for(i=1;i<=n;i++)
+	sum=sum+pow(i,i)
+step 4: print sum
+step 5: end
+
+-----------------------------------------------------------------------------------------
+
+7. Find the value of 12-22+32-42+52-62------n2
+
+step 1: start
+step 2: initialize sum=0,diff=0
+step 3: for(i=1;i<=n;i++)
+	if(n%2==0)
+	diff=diff-(i*i)
+	else
+	sum=sum+(i*i)
+step 4: sum=sum+diff
+step 5: print sum
+step 6: end
+
+-----------------------------------------------------------------------------------------
+
+8. Find the value of( 1/x)+(1/x2)+( 1/x3) +(1/x4) +------+(1/xn)
+
+step 1: start
+step 2: initalize sum=0 and read number into variable n
+step 3: for(i=1;i<=n;i++)
+	sum=sum+(1/pow(n,i))
+step 4: print sum
+step 5: end
