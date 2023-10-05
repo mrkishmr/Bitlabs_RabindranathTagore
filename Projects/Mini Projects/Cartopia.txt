@@ -1,0 +1,448 @@
+import java.util.*;
+
+class EmptyCartException extends Exception
+{
+	public EmptyCartException(String message)
+	{
+		super(message);
+	}
+}
+
+class CartItem 
+{
+    int itemID;
+    String name;
+    String category;
+    double price;
+    int quantity;
+    CartItem(int itemID,String name,String category,double price,int quantity) 
+    {
+        this.itemID=itemID;
+        this.name=name;
+        this.category=category;
+        this.price=price;
+        this.quantity=quantity;
+    }
+    public int getItemID()
+    {
+      return itemID;
+    }
+    public String getItemName() 
+    {
+        return name;
+    }
+    public String getCategory()
+    {
+    	return category;
+    }
+    public double getItemPrice() 
+    {
+        return price;
+    }
+    public int getQuantity() 
+    {
+        return quantity;
+    }
+}
+class ShoppingCart 
+{
+    LinkedHashMap<Integer,CartItem> product;
+    public ShoppingCart() 
+    {
+        product=new LinkedHashMap<>();
+    }
+    public void addItem(CartItem item) 
+    {
+      CartItem existingItem = product.get(item.getItemID());
+if((existingItem!=null)&&(existingItem.getItemName().equalsIgnoreCase(item.getItemName()))) 
+      {
+            existingItem.quantity += item.getQuantity();
+      }
+      else 
+      {
+            product.put(item.getItemID(), item);
+      }
+System.out.println(item.getItemName()+" added successfully into cart");
+    }
+    public void removeItem(String itemName) throws EmptyCartException
+    {
+    	if(product.isEmpty())
+    	{
+    		throw new EmptyCartException("Cannot remove item as your cart is Empty");
+    	}
+    	else
+    	{
+        CartItem itemToRemove = null;
+        for (CartItem item : product.values()) 
+        {
+            if (item.getItemName().equalsIgnoreCase(itemName))
+            {
+                itemToRemove = item;
+            }
+        }
+        if (itemToRemove!=null) 
+        {
+            product.remove(itemToRemove.getItemID());
+            System.out.println(itemToRemove.getItemName()+" removed successfully from cart");
+        }
+        else
+        {
+        	System.out.println("No item found to remove with the given name");
+    	}
+    	}
+    }
+    public void reduceItemQuantity(String itemName, int reduceQuantity) throws EmptyCartException
+    {
+        if (product.isEmpty())
+        {
+            throw new EmptyCartException("Cannot reduce item quantity as your cart is Empty");
+        }
+        else
+        {
+            CartItem itemToReduce=null;
+            for (CartItem item : product.values()) 
+            {
+                if (item.getItemName().equalsIgnoreCase(itemName))
+                {
+                    itemToReduce = item;
+                    break;
+                }
+            }
+            if (itemToReduce!=null) 
+            {
+                int currentQuantity = itemToReduce.getQuantity();
+                if (reduceQuantity<=currentQuantity) 
+                {
+                    itemToReduce.quantity-=reduceQuantity;
+                    System.out.println(reduceQuantity+" quantity of "+itemToReduce.getItemName()+" taken out successfully from cart");
+                } 
+                else 
+                {
+                    System.out.println("Insufficient quantity to reduce for "+itemToReduce.getItemName());
+                }
+            }
+        }
+    }
+    public void calculateTotalPrice() throws EmptyCartException
+    {
+    	if(product.isEmpty())
+    	{
+    		throw new EmptyCartException("Cannot obtain cart value as there are no items in your cart");
+    	}
+    	else
+    	{
+        double total=0;
+        for (CartItem item : product.values())
+          {
+            total=total+item.getItemPrice()*item.getQuantity();
+          }
+      System.out.println("Cart Value: " + total);
+    	}
+    }
+  public void displayItembyName(String itemName) throws EmptyCartException
+  {
+	  if(product.isEmpty())
+		{
+			throw new EmptyCartException("There are no items in your cart");
+		}
+	  else
+	  {
+	for(CartItem item : product.values())
+	{
+    if(item.getItemName().equalsIgnoreCase(itemName))
+    {
+      System.out.println("Item Name: " + item.getItemName());
+      System.out.println("Item Price: " + item.getItemPrice());
+      System.out.println("Item Quantity: " + item.getQuantity());
+    }
+	}
+	}
+    System.out.println("No item found with the given name");
+  }
+  public void displayItembyID(int itemID) throws EmptyCartException
+  {
+	if(product.isEmpty())
+	{
+		throw new EmptyCartException("No item is found to be displayed as your cart is Empty");
+	}
+	else
+	{
+    CartItem item = product.get(itemID);
+    if(item!=null) 
+    {
+        System.out.println("Item Name: " + item.getItemName());
+        System.out.println("Item Price: " + item.getItemPrice());
+        System.out.println("Item Quantity: " + item.getQuantity());
+    }
+    else 
+    {
+        System.out.println("No item found with the given ID");
+    }
+	}
+  }
+  public void displayItemsbyPriceRange(double low, double high) throws EmptyCartException 
+  {
+    if (product.isEmpty()) 
+    {
+        throw new EmptyCartException("No Items in your cart");
+    } 
+    else 
+    {
+    	 List<CartItem> itemsInRange = new ArrayList<>(); 
+        for (CartItem item : product.values())
+          {
+            double itemPrice = item.getItemPrice();
+            if(itemPrice>=low&&itemPrice<=high) 
+            {
+                itemsInRange.add(item);
+            }
+        }
+        if(itemsInRange.isEmpty()) 
+        {
+        System.out.println("No items found in the specified price range");
+        }     
+        itemsInRange.sort(Comparator.comparingDouble(CartItem::getItemPrice));
+        System.out.println("Items within the specified price range:");
+        System.out.println("Item Name"+"\t"+"Item Price");
+        for (CartItem item : itemsInRange) 
+        {
+            System.out.println("    "+item.getItemName()+"\t"+item.getItemPrice());
+        }
+    }
+}
+  public void displayItemsbyCategory(String category) throws EmptyCartException
+  {
+	  if(product.isEmpty())
+	  {
+		  throw new EmptyCartException("No items found in your cart");
+	  }
+	  else
+	  {
+		  List<CartItem> itemCategory = new ArrayList<>();
+		  for (CartItem item : product.values())
+          {
+            String itemcategory = item.getCategory();
+            if(category.equalsIgnoreCase(itemcategory)) 
+            {
+                itemCategory.add(item);
+            }
+        }
+        if(itemCategory.isEmpty()) 
+        {
+        System.out.println("No items found for the given category");
+        }     
+        System.out.println("Items belonging to "+category+" category");
+        System.out.println("Item Name"+"\t"+"Item Price");
+        for (CartItem item : itemCategory) 
+        {
+            System.out.println("    "+item.getItemName()+"\t"+item.getItemPrice());
+        }
+	  }
+  }
+    public void displayCart() throws EmptyCartException
+    {
+    	if(product.isEmpty())
+ 		{
+ 			throw new EmptyCartException("Cannot display items as your cart is Empty");
+ 		}
+    	else
+    	{
+        for (CartItem item : product.values()) 
+        {
+            System.out.println("Item Name: " + item.getItemName());
+        }
+    	}
+    }
+}
+public class Cartopia
+{
+  void cartMenu()
+  {
+    Scanner sc=new Scanner(System.in);
+    ShoppingCart sp = new ShoppingCart();
+    int n=0;
+    char ch='\0';
+    System.out.println("Select any one of the options to proceed with your shopping activity");
+        do
+        {
+          System.out.println("Press 1 to Add an item");
+          System.out.println("Press 2 to Remove an item");
+          System.out.println("Press 3 to Reduce the quantity of an existing item in cart");
+          System.out.println("Press 4 to Display item details by item name");
+          System.out.println("Press 5 to Display item details by item ID");
+          System.out.println("Press 6 to Display items with the specified price range");
+          System.out.println("Press 7 to Display items based on category");
+          System.out.println("Press 8 to Display all the items in the cart");
+          System.out.println("Press 9 to obtain the Cart Value (Total price of all items added into cart)");
+          System.out.println("Select your choice");
+          n=sc.nextInt();
+          switch(n)
+            {
+              case 1:
+                {
+                  System.out.println("Enter the product details");
+                  System.out.print("Item ID: ");
+                  int itemID=sc.nextInt();
+                  System.out.print("Item name: ");
+                  String itemName=sc.next();
+                  System.out.print("Item category: ");
+                  String category=sc.next();
+                  System.out.print("Item price: ");
+                  double price;
+                  do
+                  {
+                    price=sc.nextDouble();
+                    if(price<=0)
+                    {
+                      System.out.println("Invalid Price entered! Please enter a valid price!");
+                    }                    
+                  }while(price<=0);
+                  System.out.print("Quantity: ");
+                  int quantity;
+                  do
+                    {
+                      quantity=sc.nextInt();
+                      if(quantity<=0)
+                      {
+                        System.out.println("Quantity cannot be negative! Please enter the valid quantity");
+                      }
+                    }while(quantity<=0);
+                  CartItem it=new CartItem(itemID,itemName,category,price,quantity);
+                  sp.addItem(it);
+                  break;
+                }
+              case 2:
+                {
+                    try
+                    {
+                    	System.out.println("Enter the item name to be removed");
+                    	String itemName=sc.next();
+                    	sp.removeItem(itemName);
+                    }
+                    catch(EmptyCartException ec)
+                    {
+                    	System.out.println(ec.getMessage());
+                    }
+                    break;
+                }
+              case 3:
+              {
+            	  try
+            	  {
+            		System.out.println("Enter the item name whose quantity is to be reduced");
+                  	String itemName=sc.next();
+                  	System.out.println("Enter the quantity to be reduced");
+                  	int quantity=sc.nextInt();
+                  	sp.reduceItemQuantity(itemName,quantity);
+            	  }
+            	  catch(EmptyCartException ec)
+                  {
+                  	System.out.println(ec.getMessage());
+                  }
+                  break;
+              }
+              case 4:
+                {
+                try 
+                {
+                  System.out.println("Enter the product name");
+                  String itemName=sc.next();
+                  sp.displayItembyName(itemName);
+                }
+                catch(EmptyCartException ec)
+                {
+                	System.out.println(ec.getMessage());
+                }
+                  break;
+                }
+              case 5:
+                {
+                try
+                {
+                  System.out.println("Enter the product ID");
+                  int itemID=sc.nextInt();
+                  sp.displayItembyID(itemID);
+                }
+                catch(EmptyCartException ec)
+                {
+                	System.out.println(ec.getMessage());
+                }
+                  break;
+                }
+              case 6:
+                {
+                  try
+                  {
+                    System.out.println("Enter the price range");
+                    System.out.print("Start range: ");
+                    double low=sc.nextDouble();
+                    System.out.print("End range: ");
+                    double high=sc.nextDouble();
+                    sp.displayItemsbyPriceRange(low,high);
+                  }
+                  catch(EmptyCartException ec)
+                    {
+                      System.out.println(ec.getMessage());
+                    }
+                  break;
+                }
+              case 7:
+              {
+            	  System.out.println("Enter the category type whose items has to be displayed");
+            	  String category=sc.next();
+            	  try
+            	  {
+            		  sp.displayItemsbyCategory(category);
+            	  }
+            	  catch(EmptyCartException ec)
+            	  {
+            		  System.out.println(ec.getMessage());
+            	  }
+            	  break;
+              }
+              case 8:
+                {
+                 try
+                 {
+                  System.out.println("List of items in the cart:");
+                  sp.displayCart();
+                 }
+                 catch(EmptyCartException ec)
+                 {
+                 	System.out.println(ec.getMessage());
+                 }
+                  break;
+                }
+              case 9:
+                {
+                try 
+                {
+                  sp.calculateTotalPrice();
+                }
+                  catch(EmptyCartException ec)
+                  {
+                  	System.out.println(ec.getMessage());
+                  }
+                  break;
+                }
+              default:
+                System.out.println("Please enter a valid choice");
+            }
+          System.out.println("Do you want to continue");
+          System.out.println("Press y to continue or n to exit");
+        ch=sc.next().charAt(0);
+          if(ch=='n')
+          {
+            break;
+          }
+        }while(ch=='y');
+        sc.close();
+  }
+  public static void main(String ar[]) 
+    {
+       CartEasy ct=new CartEasy();
+       System.out.println("Welcome to Cartopia");
+       ct.cartMenu();
+       System.out.println("Thank you for using this application!");
+    }
+}
